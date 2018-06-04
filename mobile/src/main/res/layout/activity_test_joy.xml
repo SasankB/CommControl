@@ -9,37 +9,40 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/drone_img"
         android:orientation="vertical">
 
-        <io.github.controlwear.virtual.joystick.android.JoystickView xmlns:custom="http://schemas.android.com/apk/res-auto"
+        <io.github.controlwear.virtual.joystick.android.JoystickView
             android:id="@+id/joystickView_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="32dp"
             android:layout_marginBottom="44dp"
             android:layout_marginEnd="32dp"
-            android:background="@drawable/joystick_background"
-            custom:JV_buttonImage="@drawable/pink_ball"
-            custom:JV_fixedCenter="true"
-            custom:layout_constraintBottom_toTopOf="@+id/seekBar2"
-            custom:layout_constraintEnd_toEndOf="parent"
-            custom:layout_constraintStart_toStartOf="parent"
-            custom:layout_constraintTop_toTopOf="parent" />
+            android:hapticFeedbackEnabled="true"
+            android:scrollbarAlwaysDrawHorizontalTrack="true"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            app:JV_borderColor="@android:color/black"
+            app:JV_borderWidth="2dp"
+            app:JV_buttonImage="@drawable/pink_ball"
+            app:JV_fixedCenter="true"
+            app:layout_constraintBottom_toTopOf="@+id/seekBar2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <SeekBar
             android:id="@+id/throttle"
             android:layout_width="match_parent"
             android:layout_height="106dp"
-            android:layout_marginBottom="40dp"
-            android:layout_marginLeft="60dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="100dp"
+            android:hapticFeedbackEnabled="true"
             android:max="100" />
 
     </LinearLayout>
-
-
-
 
 
 </android.support.constraint.ConstraintLayout>
