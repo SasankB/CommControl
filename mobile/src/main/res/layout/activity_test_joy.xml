@@ -5,60 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".test_joy">
-    <TextView
-        android:id="@+id/textView_angle_left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0°"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <io.github.controlwear.virtual.joystick.android.JoystickView xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/joystickView_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:layout_marginBottom="44dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/joystick_background"
+            custom:JV_buttonImage="@drawable/pink_ball"
+            custom:JV_fixedCenter="true"
+            custom:layout_constraintBottom_toTopOf="@+id/seekBar2"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/throttle"
+            android:layout_width="match_parent"
+            android:layout_height="106dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="100dp"
+            android:max="100" />
+
+    </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/textView_strength_left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView_angle_left"
-        android:text="0%"/>
 
 
-    <io.github.controlwear.virtual.joystick.android.JoystickView
-        xmlns:custom="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/joystickView_left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="32dp"
-        android:background="@drawable/joystick_background"
-        custom:JV_buttonImage="@drawable/pink_ball"
-        custom:JV_fixedCenter="true"/>
 
-
-    <TextView
-        android:id="@+id/textView_angle_right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:text="0°"/>
-
-
-    <TextView
-        android:id="@+id/textView_strength_right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/textView_angle_right"
-        android:text="0%"/>
-
-
-    <io.github.controlwear.virtual.joystick.android.JoystickView
-        xmlns:custom="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/joystickView_right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="64dp"
-        custom:JV_borderWidth="8dp"
-        custom:JV_backgroundColor="#009688"
-        custom:JV_borderColor="#00796B"
-        custom:JV_buttonColor="#FF6E40"/>
 </android.support.constraint.ConstraintLayout>

@@ -26,7 +26,7 @@
             android:exported="false" />
 
         <activity android:name=".test_joy"
-            android:screenOrientation="landscape">></activity>
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
